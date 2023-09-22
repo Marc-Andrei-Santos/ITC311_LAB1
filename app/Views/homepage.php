@@ -24,7 +24,7 @@
             <!-- Left Column -->
             <div class="col-md-6">
                 <div class="mb-3">
-                    <label for="ProdName" class="form-label">Product-Name</label>
+                    <label for="ProdName" class="form-label">Nameee</label>
                     <input type="text" class="form-control" name="ProdName" id="ProdName" placeholder="Enter Name" value="<?= isset($user['ProductName']) ? $user['ProductName'] : '' ?>">
                 </div>
                 <div class="mb-3">
