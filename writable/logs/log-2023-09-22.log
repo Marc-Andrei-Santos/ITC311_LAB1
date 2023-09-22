@@ -1,0 +1,122 @@
+ERROR - 2023-09-22 13:16:40 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for localhost678678 failed: No such host is known.  in C:\laragon\www\ITC311_LAB1\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\laragon\\www\\...', 185)
+#1 C:\laragon\www\ITC311_LAB1\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost678678', 'root', '', 'maci4', 3306, '', 0)
+#2 C:\laragon\www\ITC311_LAB1\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\laragon\www\ITC311_LAB1\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\laragon\www\ITC311_LAB1\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\laragon\www\ITC311_LAB1\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\laragon\www\ITC311_LAB1\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#7 C:\laragon\www\ITC311_LAB1\app\Controllers\UserController.php(72): CodeIgniter\BaseModel->findAll()
+#8 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(919): App\Controllers\UserController->homepage()
+#9 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#10 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ITC311_LAB1\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ITC311_LAB1\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for localhost678678 failed: No such host is known.  in C:\laragon\www\ITC311_LAB1\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ITC311_LAB1\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost678678', 'root', '', 'maci4', 3306, '', 0)
+#1 C:\laragon\www\ITC311_LAB1\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ITC311_LAB1\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ITC311_LAB1\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\ITC311_LAB1\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ITC311_LAB1\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ITC311_LAB1\app\Controllers\UserController.php(72): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(919): App\Controllers\UserController->homepage()
+#8 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\ITC311_LAB1\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\ITC311_LAB1\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for localhost678678 failed: No such host is known.  in C:\laragon\www\ITC311_LAB1\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ITC311_LAB1\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ITC311_LAB1\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ITC311_LAB1\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\ITC311_LAB1\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ITC311_LAB1\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\ITC311_LAB1\app\Controllers\UserController.php(72): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(919): App\Controllers\UserController->homepage()
+#7 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\ITC311_LAB1\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\ITC311_LAB1\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-22 13:16:40 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for localhost678678 failed: No such host is known. 
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `act_test`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(72): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->homepage()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ITC311_LAB1\\public\\index.php')
+ERROR - 2023-09-22 13:21:32 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo for localhost678678 failed: No such host is known.  in C:\laragon\www\ITC311_LAB1\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\laragon\\www\\...', 185)
+#1 C:\laragon\www\ITC311_LAB1\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost678678', 'root', '', 'maci4', 3306, '', 0)
+#2 C:\laragon\www\ITC311_LAB1\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\laragon\www\ITC311_LAB1\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\laragon\www\ITC311_LAB1\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\laragon\www\ITC311_LAB1\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\laragon\www\ITC311_LAB1\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#7 C:\laragon\www\ITC311_LAB1\app\Controllers\UserController.php(72): CodeIgniter\BaseModel->findAll()
+#8 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(919): App\Controllers\UserController->homepage()
+#9 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#10 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\ITC311_LAB1\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\ITC311_LAB1\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#13 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo for localhost678678 failed: No such host is known.  in C:\laragon\www\ITC311_LAB1\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\ITC311_LAB1\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost678678', 'root', '', 'maci4', 3306, '', 0)
+#1 C:\laragon\www\ITC311_LAB1\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\ITC311_LAB1\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\ITC311_LAB1\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\ITC311_LAB1\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ITC311_LAB1\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\ITC311_LAB1\app\Controllers\UserController.php(72): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(919): App\Controllers\UserController->homepage()
+#8 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#9 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\laragon\www\ITC311_LAB1\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\laragon\www\ITC311_LAB1\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo for localhost678678 failed: No such host is known.  in C:\laragon\www\ITC311_LAB1\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\ITC311_LAB1\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\ITC311_LAB1\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\ITC311_LAB1\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\laragon\www\ITC311_LAB1\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\laragon\www\ITC311_LAB1\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\laragon\www\ITC311_LAB1\app\Controllers\UserController.php(72): CodeIgniter\BaseModel->findAll()
+#6 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(919): App\Controllers\UserController->homepage()
+#7 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#8 C:\laragon\www\ITC311_LAB1\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\ITC311_LAB1\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\ITC311_LAB1\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#11 {main}
+CRITICAL - 2023-09-22 13:21:32 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo for localhost678678 failed: No such host is known. 
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `act_test`', [], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\UserController.php(72): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\UserController->homepage()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ITC311_LAB1\\public\\index.php')
