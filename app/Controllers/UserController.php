@@ -49,7 +49,8 @@ class UserController extends BaseController
     {
         // Fetch distinct ProductCategory values from your database
         $query = $this->distinct()
-                      ->select('ProductCategory') // Select the ProductCategory column
+                    
+                      ->select('ProductCategory') 
                       ->get($this->table);
 
         return $query->getResultArray();
